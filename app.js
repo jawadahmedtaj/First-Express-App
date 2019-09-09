@@ -15,6 +15,10 @@ app.get("/dog", function (req, res) {
     res.send("Meow!");
 })
 
+app.get("/r/:subredditName", function (req, res) {
+    res.send("Welcome to the subreddit");
+})
+
 app.get("*", function (req, res) {
     res.send("You are a star!!!");
 })
