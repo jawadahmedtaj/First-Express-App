@@ -16,7 +16,8 @@ app.get("/dog", function (req, res) {
 })
 
 app.get("/r/:subredditName", function (req, res) {
-    res.send("Welcome to the subreddit");
+    const subreddit = req.params.subredditName;
+    res.send("Welcome to the subreddit of: " + subreddit);
 })
 
 app.get("*", function (req, res) {
